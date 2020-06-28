@@ -35,17 +35,17 @@
                         @method('PUT')
                         <div class="row">
                             <div class="col form-group">
-                                <input name="title" value="{{ $travel->title }}" type="text" class="form-control @error('title') border-danger @enderror" placeholder="title">
-                                @error('title')
-                                <div class="text-danger my-2" role="alert">{{ $errors->first('title') }}</div>
+                                <input name="type" value="{{ $travel->category }}" type="text" class="form-control @error('category') border-danger @enderror" placeholder="category" disabled>
+                                @error('category')
+                                <div class="text-danger my-2" role="alert">{{ $errors->first('type') }}</div>
                                 @enderror
                             </div>
                         </div>
                         <div class="row">
                             <div class="col form-group">
-                                <input name="type" value="{{ $travel->category }}" type="text" class="form-control @error('category') border-danger @enderror" placeholder="category">
-                                @error('category')
-                                <div class="text-danger my-2" role="alert">{{ $errors->first('type') }}</div>
+                                <input name="title" value="{{ $travel->title }}" type="text" class="form-control @error('title') border-danger @enderror" placeholder="title">
+                                @error('title')
+                                <div class="text-danger my-2" role="alert">{{ $errors->first('title') }}</div>
                                 @enderror
                             </div>
                         </div>

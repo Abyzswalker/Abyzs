@@ -47,17 +47,17 @@
                 <ul>
                     <li class="{{ (request()->is('/')) ? 'colorlib-active' : '' }}"><a href="{{ route ('/') }}">Home</a></li>
 
-                    <li class="{{ (request()->is('style')) ? 'colorlib-active' : '' }}"><a href="{{ route('style.index') }}">Style</a></li>
+                    <li class="{{ (request()->is('travel*')) ? 'colorlib-active' : '' }}"><a href="{{ route ('travel.index') }}">Travel</a></li>
+
+                    <!-- <li class="{{ (request()->is('style')) ? 'colorlib-active' : '' }}"><a href="{{ route('style.index') }}">Style</a></li> -->
 
                     <li class="{{ (request()->is('fashion*')) ? 'colorlib-active' : '' }}"><a href="{{ route('fashion') }}">Fashion</a></li>
 
-                    <li class="{{ (request()->is('travel*')) ? 'colorlib-active' : '' }}"><a href="{{ route ('travel.index') }}">Travel</a></li>
+                    <!-- <li class="{{ (request()->is('sports*')) ? 'colorlib-active' : '' }}"><a href="{{ route('sports') }}">Sports</a></li> -->
 
-                    <li class="{{ (request()->is('sports*')) ? 'colorlib-active' : '' }}"><a href="{{ route('sports') }}">Sports</a></li>
+                    <!-- <li class="{{ (request()->is('video*')) ? 'colorlib-active' : '' }}"><a href="{{ route('video') }}">Video</a></li> -->
 
-                    <li class="{{ (request()->is('video*')) ? 'colorlib-active' : '' }}"><a href="{{ route('video') }}">Video</a></li>
-
-                    <li class="{{ (request()->is('archives*')) ? 'colorlib-active' : '' }}"><a href="{{ route('archives') }}">Archives</a></li>
+                    <!-- <li class="{{ (request()->is('archives*')) ? 'colorlib-active' : '' }}"><a href="{{ route('archives') }}">Archives</a></li> -->
                 </ul>
             </nav>
 

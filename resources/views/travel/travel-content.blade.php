@@ -1,6 +1,5 @@
 @foreach ($posts as $post)
-
-        @if($post->category_id == 1)
+   @if($post->category == 'Travel')
 
     <article class="blog-entry-travel animate-box">
         <div class="blog-img" style="background-image: url({{asset('storage/'.$post->image)}});"></div>
@@ -17,10 +16,9 @@
 
         </div>
     </article>
+     @endif
+    @endforeach
 
-    @endif
-
-@endforeach
 
 <nav aria-label="Page navigation example">
     {{ $posts->links() }}

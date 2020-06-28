@@ -26,9 +26,7 @@ class TravelController extends Controller
 
         //dd($posts);
 
-
-
-        return view('travel.travel', compact('posts', 'categories'));
+                return view('travel.travel', compact('posts', 'categories'));
 
         /*return view('travel.travel', ['posts' => $posts], ['categories' => $categories]);*/
     }
@@ -60,14 +58,13 @@ class TravelController extends Controller
 
         $validatedData = $request->validate([
             'title' => 'required|unique:posts|min:5|max:255',
-            'category' => 'required|min:4|max:10',
             'body' => 'required|min:5|max:255',
             'image' => 'image|mimes:jpeg,jpg,png,gif|required'
         ]);
 
         Post::create([
             'title' => $request->title,
-            'category' => 'travel',
+            'category' => 'Travel',
             'category_id' => 1,
             'body' => $request->body,
             'image' => $request->file('image')->store('uploads', 'public'),

@@ -13,16 +13,16 @@
 
                 <div class="container-wrap">
                     <div class="row row-bottom-padded-md">
-                    @foreach($posts as $post)
-                            @if($post->category_id == 2)
+                            @foreach ($posts as $post)
+                            @if($post->category == 'Travel')
                             <div class="col-md-4">
                             <div class="blog-entry-style animate-box">
                                 <div class="blog-img">
-                                    <a href="blog.html"><img src="images/blog-1.jpg" class="img-responsive" alt="html5 bootstrap template"></a>
+                                    <div class="blog-img" style="background-image: url({{asset('storage/'.$post->image)}});"></div>
                                 </div>
                                 <div class="desc">
                                     <p class="meta">
-                                        <span class="cat"><a href="style/{{ $post->id }}">{{ $post->type }}</a></span>
+                                        <span class="cat"><a href="style/{{ $post->id }}">{{ $post->category }}</a></span>
                                         <span class="date">{{date('M d, Y', strtotime($post->created_at))}}</span>
                                         <span class="pos">By <a href="#">{{ $post->user->name }}</a></span>
                                     </p>
@@ -31,8 +31,9 @@
                                 </div>
                             </div>
                         </div>
-                            @endif
-                        @endforeach
+                                @endif
+                            @endforeach
+
                     </div>
 
 

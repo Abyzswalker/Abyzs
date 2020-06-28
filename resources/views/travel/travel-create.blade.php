@@ -18,15 +18,7 @@
                         @csrf
                         <div class="row">
                             <div class="col form-group">
-                                <input name="title" value="{{ old('title') }}" type="text" class="form-control @error('title') border-danger @enderror" placeholder="title">
-                                @error('title')
-                                <div class="text-danger my-2" role="alert">{{ $errors->first('title') }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col form-group">
-                                <input name="category" value="{{ old('category') }}" type="text" class="form-control @error('category') border-danger @enderror" placeholder="category">
+                                <input name="category" value="Travel" type="text" class="form-control @error('category') border-danger @enderror" disabled>
                                 @error('category')
                                 <div class="text-danger my-2" role="alert">{{ $errors->first('category') }}</div>
                                 @enderror
@@ -34,7 +26,15 @@
                         </div>
                         <div class="row">
                             <div class="col form-group">
-                                <textarea name="body"  class="form-control @error('body') border-danger @enderror" placeholder="body">{{ old('body') }}</textarea>
+                                <input name="title" value="{{ old('title') }}" type="text" class="form-control @error('title') border-danger @enderror" placeholder="Title">
+                                @error('title')
+                                <div class="text-danger my-2" role="alert">{{ $errors->first('title') }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-group">
+                                <textarea name="body"  class="form-control @error('body') border-danger @enderror" placeholder="Body">{{ old('body') }}</textarea>
                                 @error('body')
                                 <div class="text-danger my-2" role="alert">{{ $errors->first('body') }}</div>
                                 @enderror
@@ -48,6 +48,7 @@
                                 @enderror
                             </div>
                         </div>
+
                         <button type="submit" class="btn btn-primary">Save</button>
                     </form>
                 </div>
